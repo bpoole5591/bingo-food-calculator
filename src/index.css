@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #e9e9e8;
+  font-family: "Roboto", "Courier New", sans-serif;
+  font-weight: 400;
+}
