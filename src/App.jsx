@@ -34,36 +34,38 @@ const inputStyles = {
 };
 
 function App() {
-  // Define the menu items with prices
   const menuItems = [
-    { name: "Candy Bar", price: 2, role: ["table", "server", "cocktailPlus"] },
-    { name: "Chili", price: 4, role: ["table", "server", "cocktailPlus"] },
-    { name: "Chips", price: 1, role: ["table", "server", "cocktailPlus"] },
-    { name: "Hot Dog", price: 3, role: ["table", "server", "cocktailPlus"] },
+    // Food
+    { name: "Ham Slider", price: 3, role: ["table", "server", "cocktailPlus"] },
     { name: "Nachos", price: 4, role: ["table", "server", "cocktailPlus"] },
-    { name: "Popcorn", price: 1, role: ["table", "server", "cocktailPlus"] },
-    { name: "Slider", price: 3, role: ["table", "server", "cocktailPlus"] },
     {
-      name: "Tostada with Rice",
+      name: "BBQ Sandwich",
       price: 4,
       role: ["table", "server", "cocktailPlus"],
     },
-    {
-      name: "Soda / Water",
-      price: 1,
-      role: ["server", "cocktail", "cocktailPlus"],
-    },
-    { name: "Beer", price: 3, role: ["cocktail", "cocktailPlus"] },
-    { name: "Wine", price: 4, role: ["cocktail", "cocktailPlus"] },
+    { name: "Hot Dog", price: 3, role: ["table", "server", "cocktailPlus"] },
+
+    // Snacks
+    { name: "Candy Bar", price: 2, role: ["table", "server", "cocktailPlus"] },
+    { name: "Chips", price: 1, role: ["table", "server", "cocktailPlus"] },
+    { name: "Popcorn", price: 1, role: ["table", "server", "cocktailPlus"] },
+
+    // Drinks
     { name: "Margarita", price: 5, role: ["cocktail", "cocktailPlus"] },
     {
       name: "Specialty Cocktail",
       price: 5,
       role: ["cocktail", "cocktailPlus"],
     },
+    { name: "Beer", price: 3, role: ["cocktail", "cocktailPlus"] },
+    { name: "Wine", price: 4, role: ["cocktail", "cocktailPlus"] },
+    {
+      name: "Soda / Water",
+      price: 1,
+      role: ["server", "cocktail", "cocktailPlus"],
+    },
   ];
 
-  // State: object like { "Tostada with rice": 0, "chili": 1, ... }
   const [quantities, setQuantities] = useState(
     menuItems.reduce((acc, item) => {
       acc[item.name] = 0;
